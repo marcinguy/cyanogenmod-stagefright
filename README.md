@@ -1,6 +1,8 @@
 # cyanogenmod-stagefright
 Stagefright on CyanogenMod 12 (Android 5.0.1) on Samsung Galaxy S3 Neo+ GT-9301I
 
+Every major exploit has a logo now :) 
+
 ![Stagefrightlogo](/stagefrightlogo.jpg)
 
 Here is the "patient" ....
