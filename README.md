@@ -13,9 +13,9 @@ Let's begin the operation ... just for laughs ... hahahahah
 
 
 
-I know this animated GIF looks cool, but seriously, let's get back to the point ... I think it is x86 anyway, we wanna do some ARM
+I know this animated GIF looks cool, but seriously, let's get back to the point ... I think it is x86 anyway, we wanna do some ARM.
 
-None of exploits worked for me
+None of exploits worked for me.
 
 Wanted to test Stagefright :)
 
@@ -29,7 +29,7 @@ I mostly worked with G0 exploit.
 
 https://www.exploit-db.com/exploits/38226/
 
-Got a Samsung Galaxy S3  Neo+ GT-9301I phone to play with .... figured out I play with custom rom (user debug build) so I can change things and experiment ... decided to use Cyanogenmod ... got the source ca. 20 GB of source code :) compiled it over night ... than rooted and flashed my mobile 
+Got a Samsung Galaxy S3  Neo+ GT-9301I phone to play with .... figured out I play with custom rom (user debug build) so I can change things and experiment ... decided to use Cyanogenmod ... got the source ca. 20 GB of source code :) compiled it over night ... than rooted and flashed my mobile. 
 
 Here is the ready ROM:
 
@@ -40,7 +40,7 @@ or if you want to compile from source:
 repo init -u git://github.com/CyanogenMod/android.git -b cm-12.0
 
 After that you have to create manifest in .repo/local_manifest.xml
-For cm 12.0 for S3 Neo it should look like this :
+For cm 12.0 for S3 Neo it should look like this:
 
 ```xml
 
@@ -79,9 +79,9 @@ Used Termux (and installed GDB from there). Could use GDB directly on the mobile
 
 Started with g0 ... decided to disable ASLR from the beginning, unfortunately it didnt work out of the box ... problem ... think to me .... different ROP chain .... 
 
-Solving problem by building the rop gadget into libc.so and recompiling
+Solving problem by building the rop gadget into libc.so and recompiling.
 
-Still does not work
+Still does not work.
 
 Looking at it closer, it has no right to work !!!
 
@@ -89,18 +89,18 @@ Looking at it closer, it has no right to work !!!
 
 Vtable is totally off ... way before the buffer .... after long time figure out that my rom is using dlmalloc ... 
 
-Changed it to jemalloc
+Changed it to jemalloc.
 
-Recompiled and flashed the mobile
+Recompiled and flashed the mobile.
 
 
 Still does not work ... but HEY at least vtable pointer is there after the buffer and I am able to overwrite it ....
 
-So why it does not work .... well the values to overwrite vtable seem wrong in G0 exploit for my Cyanogen build
+So why it does not work .... well the values to overwrite vtable seem wrong in G0 exploit for my Cyanogen build.
 
-Adjusted them .... + 8 bytes 
+Adjusted them .... + 8 bytes .
 
-Now in the original version of the exploit (G0) I happened to land 28 bytes further (+28 offset) of vtable pointer in my sprayed heap, that should be readAt function address .... but in the original version NOPs were on the heap ... so I changed it to only 28 NOPs and started my ROP Chain/Stack right away
+Now in the original version of the exploit (G0) I happened to land 28 bytes further (+28 offset) of vtable pointer in my sprayed heap, that should be readAt function address .... but in the original version NOPs were on the heap ... so I changed it to only 28 NOPs and started my ROP Chain/Stack right away.
 
 Here is the assembly, see at the bottom. It is branching to value of offset +28 bytes:
 
@@ -150,7 +150,7 @@ https://github.com/marcinguy/cyanogenmod-stagefright/blob/master/exploit1.py
 New challenge .... make it work without modifying libc.so, so use different rop chain .... 
 
 
-Tools I used to find gadgets 
+Tools I used to find gadgets: 
 
 Ropper, ROPGadget, xrop ... .
 
