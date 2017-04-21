@@ -42,11 +42,11 @@ So why it does not work .... well the values to overwrite vtable seem wrong in G
 
 Adjusted them .... + 8 bytes 
 
-Now in the original version of the exploit (G0) I happened to land 28 bytes of vtable pointer in my sprayed heap, that should be readAt pointer.... but in the original version NOP were on the heap ... so I changed it to only 28 nops and started my ROP Chain/Stack right away
+Now in the original version of the exploit (G0) I happened to land 28 bytes of vtable pointer in my sprayed heap, that should be readAt function .... but in the original version NOP were on the heap ... so I changed it to only 28 nops and started my ROP Chain/Stack right away
 
 
 
-WHOOOO HOOO ... overwrote vtable and function pointer of readAt ... and the ROP chain seem to work ... but it stucks on executing shellcode wanted to write a file .... problem seem to be SELinux (seems that mediaserver is sandboxed). Disabled it.
+WHOOOO HOOO ... overwrote vtable and function pointer of readAt to my ROP chain/stack ... and the ROP chain seem to work ... but it stucks on executing shellcode wanted to write a file .... problem seem to be SELinux (seems that mediaserver is sandboxed). Disabled it.
 
 https://github.com/marcinguy/cyanogenmod-stagefright/blob/master/exploit1.py
 
