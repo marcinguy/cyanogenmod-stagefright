@@ -29,7 +29,7 @@ I mostly worked with G0 exploit.
 
 https://www.exploit-db.com/exploits/38226/
 
-Got a Samsung Galaxy S3  Neo+ GT-9301I phone to play with .... figured out i play with customer rom (debug build) so I can change things and experiment ... decided to use Cyanogenmod ... got the source ca 20 GB of source code :) compiled it over night ... than rooted and flashed my mobile 
+Got a Samsung Galaxy S3  Neo+ GT-9301I phone to play with .... figured out i play with custom rom (debug build) so I can change things and experiment ... decided to use Cyanogenmod ... got the source ca 20 GB of source code :) compiled it over night ... than rooted and flashed my mobile 
 
 Used Termux (and installed GDB from there). Could use GDB directly on the mobile, no need to use gdbserver .... 
 
@@ -56,7 +56,7 @@ So why it does not work .... well the values to overwrite vtable seem wrong in G
 
 Adjusted them .... + 8 bytes 
 
-Now in the original version of the exploit (G0) I happened to land 28 bytes of vtable pointer in my sprayed heap, that should be readAt function .... but in the original version NOP were on the heap ... so I changed it to only 28 nops and started my ROP Chain/Stack right away
+Now in the original version of the exploit (G0) I happened to land 28 bytes further (+28 offset) of vtable pointer in my sprayed heap, that should be readAt function address .... but in the original version NOPs were on the heap ... so I changed it to only 28 NOPs and started my ROP Chain/Stack right away
 
 
 
@@ -65,7 +65,7 @@ WHOOOO HOOO ... overwrote vtable and function pointer of readAt to my ROP chain/
 https://github.com/marcinguy/cyanogenmod-stagefright/blob/master/exploit1.py
 
 
-New challenge .... make it work without modifying libc, so use different rop chain .... 
+New challenge .... make it work without modifying libc.so, so use different rop chain .... 
 
 
 Tools I used to find gadgets 
