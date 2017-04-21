@@ -42,7 +42,7 @@ So why it does not work .... well the values to overwrite vtable seem wrong in G
 
 Adjusted them .... + 8 bytes 
 
-Now in the original version of the exploit (G0) I happened to land 28 bytes of vtable pointer, that should be readAt pointer.... but in the original version NOP were padded ... so I changed it to only 28 nops and started my ROP Chain/Stack right away
+Now in the original version of the exploit (G0) I happened to land 28 bytes of vtable pointer in my sprayed heap, that should be readAt pointer.... but in the original version NOP were on the heap ... so I changed it to only 28 nops and started my ROP Chain/Stack right away
 
 
 
