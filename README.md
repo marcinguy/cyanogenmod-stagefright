@@ -13,7 +13,7 @@ Let's begin the operation ... just for laughs ... hahahahah
 
 
 
-I know it looks cool, but seriously, let's get back to the point
+I know this animated GIF looks cool, but seriously, let's get back to the point ... I think it is x86 anyway, we wanna do some ARM
 
 None of exploits worked for me
 
