@@ -11,9 +11,9 @@ https://googleprojectzero.blogspot.de/2015/09/stagefrightened.html
 
 https://github.com/NorthBit/Metaphor
 
-I mostly work with G0 exploit.
+I mostly worked with G0 exploit.
 
-Got a Samsung Galaxy S3 GT-9301I phone to play with .... figured out i play with customer rom (debug build) so I can change things and experiment ... decided to use Cyanogenmod ... got the source ca 20 GB of source code :) compiled it over night ... than rooted and flashed my mobile 
+Got a Samsung Galaxy S3  Neo+ GT-9301I phone to play with .... figured out i play with customer rom (debug build) so I can change things and experiment ... decided to use Cyanogenmod ... got the source ca 20 GB of source code :) compiled it over night ... than rooted and flashed my mobile 
 
 Used Termux (and installed GDB from there). Could use GDB directly on the mobile, no need to use gdbserver .... 
 
