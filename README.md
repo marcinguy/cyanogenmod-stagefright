@@ -1,7 +1,7 @@
 # cyanogenmod-stagefright
 Stagefright on CyanogenMod 12 (Android 5.0.1) on Samsung Galaxy S3 Neo+ GT-9301I
 
-Seems like every major vulnerability has a logo now :) Here is a sexy Stagefright logo  ... BTW stagefright is now also a TAG of StackOverflow/SecurityExchange
+Seems like every major vulnerability has a logo now :) Here is a sexy Stagefright logo  ... BTW stagefright is also a possible TAG of StackOverflow/SecurityExchange .... no wonder, there is 1.6 billion Android devices on the market
 
 ![Stagefrightlogo](/stagefrightlogo.jpg)
 
