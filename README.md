@@ -56,16 +56,17 @@ For cm 12.0 for S3 Neo it should look like this :
   <project name="MSM8226-samsung/android_device_samsung_msm8226-common.git" path="device/samsung/msm8226-common" remote="github" revision="cm-12.0" />
 </manifest>
 ```
+Than you do:
 
-1. repo sync
+repo sync
 
-2. now following commands will start build (be in folder where you synced cm ) : 
+now following commands will start build (be in folder where you synced cm ) : 
 
-3. . build/envsetup.sh
+1. . build/envsetup.sh
 
-4. lunch - then you have to find cm_s3ve3g-userdebug and enter its number 
+2. lunch - then you have to find cm_s3ve3g-userdebug and enter its number 
 
-5. time mka bacon
+3. time mka bacon
 
 
 and then you should wait 3-6 hours for build to finish ( depends on your PC configuration )
