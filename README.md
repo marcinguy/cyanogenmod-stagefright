@@ -25,7 +25,7 @@ Still does not work
 
 Looking at it close, it has no right to work !!!
 
-ASLR... and heap spraying is making problems
+
 
 Vtable is totally off ... way before the buffer .... after long time figure out that my rom is using dlmalloc ... 
 
