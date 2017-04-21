@@ -1,6 +1,8 @@
 # cyanogenmod-stagefright
 Stagefright on CyanogenMod 12 (Android 5.0.1) on Samsung Galaxy S3 Neo+ GT-9301I
 
+![SamsungS3Neo](/image.png)
+
 None of exploits worked for me
 
 Wanted to test Stagefright :)
