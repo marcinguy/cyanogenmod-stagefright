@@ -57,15 +57,15 @@ For cm 12.0 for S3 Neo it should look like this :
 </manifest>
 ```
 
-repo sync
+1. repo sync
 
-now following commands will start build (be in folder where you synced cm ) : 
+2. now following commands will start build (be in folder where you synced cm ) : 
 
-. build/envsetup.sh
+3. . build/envsetup.sh
 
-lunch - then you have to find cm_s3ve3g-userdebug and enter its number 
+4. lunch - then you have to find cm_s3ve3g-userdebug and enter its number 
 
-time mka bacon
+5. time mka bacon
 
 
 and then you should wait 3-6 hours for build to finish ( depends on your PC configuration )
