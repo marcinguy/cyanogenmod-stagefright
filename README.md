@@ -7,7 +7,7 @@ Wanted to test Stagefright :)
 
 Great resources.
 
-https://googleprojectzero.blogspot.de/2015/09/stagefrightened.html
+https://googleprojectzero.blogspot.com/2015/09/stagefrightened.html
 
 https://github.com/NorthBit/Metaphor
 
