@@ -23,7 +23,7 @@ Solving problem by building the rop gadget into libc.so and recompiling
 
 Still does not work
 
-Looking at it close, it has no right to work !!!
+Looking at it closer, it has no right to work !!!
 
 
 
