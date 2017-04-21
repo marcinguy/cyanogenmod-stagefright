@@ -17,7 +17,7 @@ Let's begin the operation ... just for laughs ... hahahahah
 
 I know this animated GIF looks cool, but seriously, let's get back to the point ... I think it is x86 anyway, we wanna do some ARM.
 
-None of exploits worked for me.
+None of publicly available exploits I found worked for me.
 
 Wanted to test Stagefright :)
 
@@ -79,9 +79,9 @@ Result is a zip file you can flash your mobile with a flashing program like TWRP
 
 Used Termux (and installed GDB from there). Could use GDB directly on the mobile, no need to use gdbserver .... 
 
-Started with g0 ... decided to disable ASLR from the beginning, unfortunately it didnt work out of the box ... problem ... think to me .... different ROP chain .... 
+Started with g0 ... decided to disable ASLR from the beginning, unfortunately it didnt work out of the box ... problem ... think to me .... different ROP chain .... yea, I was missing gadgets.
 
-Solving problem by building the rop gadget into libc.so and recompiling.
+Solving problem by building the missing rop gadgets into libc.so and recompiling.
 
 Still does not work.
 
@@ -98,11 +98,11 @@ Recompiled and flashed the mobile.
 
 Still does not work ... but HEY at least vtable pointer is there after the buffer and I am able to overwrite it ....
 
-So why it does not work .... well the values to overwrite vtable seem wrong in G0 exploit for my Cyanogen build.
+So why it does not work .... well the values to overwrite vtable seem wrong in G0 exploit for my Cyanogen build. Dont have a Nexus 5 phone so I cannot tell, but I had to adjust the exploit.
 
 Adjusted them .... + 8 bytes .
 
-Now in the original version of the exploit (G0) I happened to land 28 bytes further (+28 offset) of vtable pointer in my sprayed heap, that should be readAt function address .... but in the original version NOPs were on the heap ... so I changed it to only 28 NOPs and started my ROP Chain/Stack right away.
+Now in the original version of the exploit (G0) I happened to land 28 bytes further (+28 offset) of vtable pointer in my sprayed heap, that should be readAt function address .... but in the original version NOPs were on the heap ... so I changed it to only 28 NOPs and started my ROP Chain/Stack right away. Not sure how this should work originally and on Nexus 5 phone.
 
 Here is the assembly, see at the bottom. It is branching to value of offset +28 bytes:
 
