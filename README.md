@@ -15,6 +15,8 @@ I mostly work with G0 exploit.
 
 Got a Samsung Galaxy S3 GT-9301I phone to play with .... figured out i play with customer rom (debug build) so I can change things and experiment ... decided to use Cyanogenmod ... got the source ca 20 GB of source code :) compiled it over night ... than rooted and flashed my mobile 
 
+Used Termux (and installed GDB from there). Could use GDB directly on the mobile, no need to use gdbserver .... 
+
 Started with g0 ... decided to disable ASLR from the beginning, unfortunately it didnt work out of the box ... problem ... think to me .... different ROP chain .... 
 
 Solving problem by building the rop gadget into libc.so and recompiling
@@ -61,6 +63,8 @@ https://github.com/marcinguy/cyanogenmod-stagefright/blob/master/exploit2.py
 
 
 New challenge ... exploit stock Samsung ROM Android 4.4.2 
+
+Had to compile gdbserver and/or GDB since Termux does not work on Android <=5
 
 Currently stuck at it ... seems like Samsung remove libc symbols and modifies a lot ... dont see the memcpy call that overwrites 
 
