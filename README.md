@@ -13,6 +13,8 @@ https://github.com/NorthBit/Metaphor
 
 I mostly worked with G0 exploit.
 
+https://www.exploit-db.com/exploits/38226/
+
 Got a Samsung Galaxy S3  Neo+ GT-9301I phone to play with .... figured out i play with customer rom (debug build) so I can change things and experiment ... decided to use Cyanogenmod ... got the source ca 20 GB of source code :) compiled it over night ... than rooted and flashed my mobile 
 
 Used Termux (and installed GDB from there). Could use GDB directly on the mobile, no need to use gdbserver .... 
