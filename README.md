@@ -70,6 +70,8 @@ time mka bacon
 
 and then you should wait 3-6 hours for build to finish ( depends on your PC configuration )
 
+Result is a zip file you can flash your mobile with a flashing program like TWRP.
+
 
 
 Used Termux (and installed GDB from there). Could use GDB directly on the mobile, no need to use gdbserver .... 
