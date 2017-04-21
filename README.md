@@ -6,9 +6,14 @@ Here is the "patient" ....
 ![SamsungS3Neo](/image.png)
 
 
-Let's begin the operation:
+Let's begin the operation ... just for laughs ... hahahahah
 
 ![debug](/debug.gif)
+
+
+
+
+I know it looks cool, but seriously, let's get back to the point
 
 None of exploits worked for me
 
