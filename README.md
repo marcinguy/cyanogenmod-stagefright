@@ -38,7 +38,7 @@ Still does not work ... but HEY at least vtable pointer is there after the buffe
 
 So why it does not work .... well the values to overwrite vtable seem wrong in G0 exploit for my Cyanogen build
 
-Adjusted them ....
+Adjusted them .... + 8 bytes 
 
 
 
