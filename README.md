@@ -31,6 +31,47 @@ https://www.exploit-db.com/exploits/38226/
 
 Got a Samsung Galaxy S3  Neo+ GT-9301I phone to play with .... figured out I play with custom rom (debug build) so I can change things and experiment ... decided to use Cyanogenmod ... got the source ca 20 GB of source code :) compiled it over night ... than rooted and flashed my mobile 
 
+Here is the ready ROM:
+
+https://forum.xda-developers.com/galaxy-s3-neo/orig-development/rom-cyanogenmod-12-s3-neo-t2983109
+
+or if you want to compile from source:
+
+repo init -u git://github.com/CyanogenMod/android.git -b cm-12.0
+
+After that you have to create manifest in .repo/local_manifest.xml
+For cm 12.0 for S3 Neo it should look like this :
+
+```xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="CyanogenMod/android_hardware_samsung.git" path="hardware/samsung" remote="github" revision="cm-12.0" />
+  <project name="CyanogenMod/android_hardware_qcom_fm.git" path="hardware/qcom/fm" remote="github" revision="cm-12.0" />
+  <project name="CyanogenMod/android_device_qcom_common.git" path="device/qcom/common" remote="github" revision="cm-12.0" />
+  <project name="MSM8226-samsung/android_device_samsung_s3ve3g.git" path="device/samsung/s3ve3g" remote="github" revision="cm-12.0" />
+  <project name="MSM8226-samsung/android_vendor_samsung_s3ve3g.git" path="vendor/samsung/s3ve3g" remote="github" revision="cm-12.0" />
+  <project name="MSM8226-samsung/android_kernel_samsung_s3ve3g.git" path="kernel/samsung/s3ve3g" remote="github" revision="cm-12.0" />
+  <project name="CyanogenMod/android_device_samsung_qcom-common.git" path="device/samsung/qcom-common" remote="github" revision="cm-12.0" />
+  <project name="MSM8226-samsung/android_device_samsung_msm8226-common.git" path="device/samsung/msm8226-common" remote="github" revision="cm-12.0" />
+</manifest>
+```
+
+repo sync
+
+now following commands will start build (be in folder where you synced cm ) : 
+
+. build/envsetup.sh
+
+lunch - then you have to find cm_s3ve3g-userdebug and enter its number 
+
+time mka bacon
+
+
+and then you should wait 3-6 hours for build to finish ( depends on your PC configuration )
+
+
+
 Used Termux (and installed GDB from there). Could use GDB directly on the mobile, no need to use gdbserver .... 
 
 Started with g0 ... decided to disable ASLR from the beginning, unfortunately it didnt work out of the box ... problem ... think to me .... different ROP chain .... 
