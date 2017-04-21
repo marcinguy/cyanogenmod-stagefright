@@ -8,7 +8,7 @@ CyanogenMod was the biggest, most widely used custom Android ROM. Now, it has be
 
 CyanogenMod sources are still available to download.
 
-This research was made on Cyanogenmod 12.0 which is/was vulnerable to Stagefright.
+This research was made on CyanogenMod 12.0 which is/was vulnerable to Stagefright.
 
 Seems like every major vulnerability has a logo now :) Here is a sexy Stagefright logo  ... BTW stagefright is also a possible TAG of StackOverflow/SecurityExchange .... no wonder, there is 1.6 billion Android devices on the market
 
