@@ -1,6 +1,14 @@
 # cyanogenmod-stagefright
 Stagefright on CyanogenMod 12 (Android 5.0.1) on Samsung Galaxy S3 Neo+ GT-9301I
 
+CyanogenMod is dead and its successor is called LineageOs.
+
+CyanogenMod was the biggest, most widely used custom Android ROM. Now, it has been discontinued, due in part to internal conflicts within Cyanogen Inc. Don’t worry, though: A new fork of CyanogenMod called Lineage OS is taking up the mantle, and it will keep most of what you loved about CyanogenMod.
+
+CyanogenMod sources are still available to download.
+
+This research was made on Cyanogenmod 12.0 which is/was vulnerable to Stagefright.
+
 Seems like every major vulnerability has a logo now :) Here is a sexy Stagefright logo  ... BTW stagefright is also a possible TAG of StackOverflow/SecurityExchange .... no wonder, there is 1.6 billion Android devices on the market
 
 ![Stagefrightlogo](/stagefrightlogo.jpg)
