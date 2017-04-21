@@ -21,7 +21,7 @@ None of exploits worked for me.
 
 Wanted to test Stagefright :)
 
-Great resources.
+Great resources:
 
 https://googleprojectzero.blogspot.com/2015/09/stagefrightened.html
 
