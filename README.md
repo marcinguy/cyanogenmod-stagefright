@@ -19,7 +19,7 @@ Here is the "test object" ....
 ![SamsungS3Neo](/image.png)
 
 
-Let's begin it ... just for laughs ... hahahahah
+Let's begin this ... just for laughs ... hahahahah
 
 ![debug](/debug.gif)
 
