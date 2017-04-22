@@ -2,7 +2,7 @@
 Stagefright on CyanogenMod 12 (Android 5.0.1) on Samsung Galaxy S3 Neo+ GT-9301I
 
 
-*CyanogenMod is dead and its successor is called LineageOs.*
+*CyanogenMod is dead and its successor is called Lineage OS.*
 
 *CyanogenMod was the biggest, most widely used custom Android ROM. Now, it has been discontinued, due in part to internal conflicts within Cyanogen Inc. Don’t worry, though: A new fork of CyanogenMod called Lineage OS is taking up the mantle, and it will keep most of what you loved about CyanogenMod.*
 
