@@ -14,12 +14,12 @@ Seems like every major vulnerability has a logo now :) Here is a sexy Stagefrigh
 
 ![Stagefrightlogo](/stagefrightlogo.jpg)
 
-Here is the "patient" ....
+Here is the "test object" ....
 
 ![SamsungS3Neo](/image.png)
 
 
-Let's begin the operation ... just for laughs ... hahahahah
+Let's begin it ... just for laughs ... hahahahah
 
 ![debug](/debug.gif)
 
