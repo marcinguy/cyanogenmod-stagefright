@@ -19,7 +19,7 @@ Here is the "test object" ....
 ![SamsungS3Neo](/image.png)
 
 
-Let's begin this ... just for laughs ... hahahahah
+Let's begin this ... how my friends think it was like ....
 
 ![debug](/debug.gif)
 
@@ -27,6 +27,10 @@ Let's begin this ... just for laughs ... hahahahah
 
 
 I know this animated GIF looks cool, but seriously, let's get back to the point ... I think it is x86 anyway, we wanna do some ARM.
+
+How it really was:
+
+![reality](/reality.png)
 
 None of publicly available exploits I found worked for me.
 
